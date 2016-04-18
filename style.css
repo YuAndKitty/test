@@ -102,7 +102,7 @@ a:link,a:visited,a:focus{
 	width:30px;
 	height:20px;
 	/* background-color:red; */
-	background-image:url(../tooltip1.svg);
+	background-image:url(tooltip1.svg);
 	background-repeat:no-repeat;
 	background-position:center center;
 	background-size:100%;
