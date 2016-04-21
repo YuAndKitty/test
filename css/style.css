@@ -1,177 +1,179 @@
-/* Global 全局 */
-html{
-	width:100%;
-	height:100%;
-	/* 屏幕旋转文字大小不会被改变 */
-	-webkit-text-size-adjust:none;
-	-moz-text-size-adjust:none;
-	-ms-text-size-adjust:none;
-	-o-text-size-adjust:none;
-	text-size-adjust:none;
-}
-body,ul{margin:0;padding:0;}
-body{
-	width:100%;
-	height:100%;
-	background-color:#47c9af;
-	color:#74777b;
-	font-weight:300;
-	font-size:1.5em;
-	font-family:"Raleway","Arail";
-}
-
-ul{
-	list-style:none;
-}
-
-a:link,a:visited,a:focus{
-	text-decoration:none;
-	outline:none;
-}
-
-*,*:after,*:before{
-	/* 不要让边距或边框影响盒子大小 */
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-ms-box-sizing:border-box;
-	-o-box-sizing:border-box;
-	box-sizing:border-box;
-}
-
-*:after,*:before{
-	display:block;
-	content:"";
-}
-
-*:after{clear:both;}
-
-
-
-/* Navgaitor 导航*/
-.nav{
-	width:800px;
-	height:300px;
-	margin:200px auto;
-}
-
-.nav li{
-	display:inline-block;
-	margin:0 1em;
-}
-
-.tooltip{
-	display:inline-block;
-	font-weight:700;
-	color:rgba(0, 0, 0, 0.3);
-	padding:0.15em 0.1em 0;
-	position:relative;
-	z-index:9;
-	-webkit-transition:color 0.3s;
-			transition:color 0.3s;
-}
-.tooltip:hover{color:rgba(255,255,255,1);}
-
-.tooltip-content{
-	position:absolute;
-	z-index:99;
-	width:80px;
-	height:80px;
-	border-radius:50%;
+body {
+	font-size:14px;
+	color:#555;
 	background-color:#fff;
+	font-family:"Avenir Next","Lantinghei SC";
+	-webkit-font-smoothing:antialiased;
+	-moz-font-smoothing:antialiased;
+}
+.warp{
+	width:100%;
+	height:600px;
+	position: absolute;
+	top:50%;
+	margin-top:-300px;
+	overflow:hidden;
+	-webkit-perspective:800px;
+	-moz-perspective:800px;
+	background-color:#333;
+}
+.photo{
+	width:260px;
+	height:320px;
+	position: absolute;
+	z-index:1;
+	box-shadow:0 0 1px rgba(0,0,0,0.1);
+	transition: all 0.5s ease-in;
+	-webkit-transition: all 0.5s ease-in;
+	-moz-transition: all 0.5s ease-in;
 	left:50%;
-	margin-left:-40px;
-	bottom:100%;
-	margin-bottom:20px;
+	top:50%;
+	margin-left:-130px;
+	margin-top:-160px;
+	/*transform: rotateY(30deg);
+	-webkit-transform: rotateY(30deg);*/
+}
+.photo .side {
+	width:100%;
+	height:100%;
+	background-color:#eee;
+	position: absolute;
+	top:0;
+	right:0;
+	padding:20px;
+	box-sizing:border-box;	
+}
+.photo .side-front{}
+.photo .side-front .image{
+	width:100%;
+	height:250px;
+	line-height:250px;
+	overflow:hidden;
+}
+.photo .side-front .image img{
+	width:100%;
+}
+.photo .side-front .caption{
 	text-align:center;
-	padding-top:25px;
-	color:#47c9af;
-	opacity:0;
-	-webkit-transition:all 0.3s;
-			transition:all 0.3s;
+	font-size:16px;
+	line-height:50px;
 }
 
-.tooltip .tooltip-content i{
-	opacity:0;
-	-webkit-transition:all  0.3s;
-			transition:all  0.3s;
+.photo .side-back {
+
+}
+.photo .side-back .desc {
+	color:#666;
+	font-size:14px;
+	line-height:1.5em;
 }
 
-.tooltip-content::after{
-	display:block;
-	content:"";
-	width:30px;
-	height:20px;
-	/* background-color:red; */
-	background-image:url(../images/tooltip1.svg);
-	background-repeat:no-repeat;
-	background-position:center center;
-	background-size:100%;
-	position:absolute;
-	top:100%;
+.photo_center{
 	left:50%;
-	margin:-7px 0 0 -15px;
+	top:50%;
+	margin-left:-130px;
+	margin-top:-160px;
+	z-index:999;
+}
+
+.photo-wrap{
+	position: absolute;
+	width:100%;
+	height:100%;
+	-webkit-transform-style:preserve-3d;
+	-webkit-transition:all 0.6s ease;
+	-moz-transform-style:preserve-3d;
+	-moz-transition:all 0.6s ease;
+}
+
+
+.photo-wrap .side-front{
+	-webkit-transform:rotateY(0deg);
+	-moz-transform:rotateY(0deg);
+}
+.photo-wrap .side-back {
+	-webkit-transform:rotateY(180deg);
+	-moz-transform:rotateY(180deg);
+	/*在父级元素设置了-moz-transform-style:preserve-3d;时会有很好的rotateY(180deg)旋转效果*/
+}
+.photo-wrap .side{
+	-webkit-backface-visibility:hidden;
+	-moz-backface-visibility:hidden;
+	/*当对象旋转90-180度的时候就会被影藏*/
+}
+
+
+.photo_front .photo-wrap{
+	-webkit-transform:rotateY(0deg);
+	-moz-transform:rotateY(0deg);
+}
+.photo_back .photo-wrap{
+	-webkit-transform:rotateY(180deg);
+	-moz-transform:rotateY(180deg);
+}
+
+
+.nav {
+	width:80%;
+	height:30px;
+	line-height:30px;
+	position:absolute;
+	left:10%;
+	right:10%;
+	bottom:20px;
+	z-index:999;
+	text-align:center;
+}
+.nav .i {
+	width:30px;
+	height:30px;
+	display:inline-block;
+	cursor:pointer;
+	background-color:#aaa;
+	text-align:center;
+	margin:0 1px;
+	border-radius:50%;
+	-webkit-transform:scale(0.48);
+	-moz-transform:scale(0.48);
+
+	transition:all 0.4s ease;
+	-webkit-transition:all 0.4s ease;
+	-moz-transition:all 0.4s ease;
+}
+
+.nav .i_current{
+-moz-transform:scale(1);
+	-webkit-transform:scale(1);
+	background:url(../images/icon1.png) center center no-repeat #aaa;
+}
+.nav .i_back{
+	-webkit-transform:rotateY(-180deg);
+	-moz-transform:rotateY(-180deg);
+	background-color:#555;
+	/*background:url(../images/icon2.png) center center no-repeat #555;*/
+}
+.photo-wrap{
+	-webkit-transform-origin:0% 50%;
+	-moz-transform-origin:0% 50%;
+}
+.photo_front .photo-wrap{
+	-webkit-transform:translate(0px,0px) rotateY(0deg);
+	-moz-transform:translate(0px,0px) rotateY(0deg);
+}
+.photo_back .photo-wrap{
+	-webkit-transform:translate(260px,0px) rotateY(180deg);
+	-moz-transform:translate(260px,0px) rotateY(180deg);
 
 }
 
 
-/* 动画部分 */
-
-.tooltip-effect-1 .tooltip-content{
-	-webkit-transform: translate3d(0,10px,0) rotate3d(1, 1, 1,45deg);
-			transform: translate3d(0,10px,0) rotate3d(1, 1, 1,45deg);
-	-webkit-transform-origin:center bottom;
-			transform-origin:center bottom;
-}
-.tooltip-effect-1 .tooltip-content i{
-	-webkit-transform: scale3d(0, 0, 1);
-			transform: scale3d(0, 0, 1);
-}
-
-.tooltip-effect-2 .tooltip-content{
-	-webkit-transform: translate3d(0,20px,0);
-			transform: translate3d(0,20px,0);
-}
-.tooltip-effect-2 .tooltip-content i{
-	-webkit-transform:translate3d(0, 15px, 0);
-			transform:translate3d(0, 15px, 0); 
-}
-
-.tooltip-effect-3 .tooltip-content{
-	-webkit-transform:translate3d(0,20px,0) rotate3d(0, 1, 0, 90deg);
-			transform:translate3d(0,20px,0) rotate3d(0, 1, 0, 90deg);
-	-webkit-transform-origin:50% 100%;
-			transform-origin:50% 100%;
-}
-.tooltip-effect-3 .tooltip-content i{
-	-webkit-transform:scale3d(0, 0, 1);
-			transform:scale3d(0, 0, 1);
-}
 
 
-.tooltip-effect-4 .tooltip-content{
-	-webkit-transform: translate3d(0, -20px, 0);
-			transform: translate3d(0, -20px, 0);
-}
-.tooltip-effect-4 .tooltip-content i{
-	-webkit-transform:translate3d(0, 20px, 0);
-			transform:translate3d(0, 20px, 0);
-}
 
 
-.tooltip-effect-5 .tooltip-content{
-	-webkit-transform:scale3d(0, 0, 1);
-			transform:scale3d(0, 0, 1);
-	-webkit-transform-origin:50% 100%;
-			transform-origin:50% 100%;
-}
-.tooltip-effect-5 .tooltip-content i{
-	-webkit-transform:translate3d(0, 20px, 0);
-			transform:translate3d(0, 20px, 0);
-}
 
-.tooltip:hover .tooltip-content,
-.tooltip:hover .tooltip-content i{
-	opacity:1;
-	-webkit-transform: translate3d(0, 0, 0) rotate3d(1, 1, 1, 0) scale3d(1, 1, 1);
-			transform: translate3d(0, 0, 0) rotate3d(1, 1, 1, 0) scale3d(1, 1, 1);
-}
+
+
+
+
+
