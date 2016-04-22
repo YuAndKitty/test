@@ -88,12 +88,12 @@ body {
 
 
 .photo-wrap .side-front{
-	-webkit-transform:rotateY(0deg);
-	-moz-transform:rotateY(0deg);
+	-webkit-transform:rotate3d(0,1,0,0deg);
+	-moz-transform:rotate3d(0,1,0,0deg);
 }
 .photo-wrap .side-back {
-	-webkit-transform:rotateY(180deg);
-	-moz-transform:rotateY(180deg);
+	-webkit-transform:rotate3d(0,1,0,180deg);
+	-moz-transform:rotate3d(0,1,0,180deg);
 	/*在父级元素设置了-moz-transform-style:preserve-3d;时会有很好的rotateY(180deg)旋转效果*/
 }
 .photo-wrap .side{
@@ -104,12 +104,12 @@ body {
 
 
 .photo_front .photo-wrap{
-	-webkit-transform:rotateY(0deg);
-	-moz-transform:rotateY(0deg);
+	-webkit-transform:rotate3d(0,1,0,0deg);
+	-moz-transform:rotate3d(0,1,0,0deg);
 }
 .photo_back .photo-wrap{
-	-webkit-transform:rotateY(180deg);
-	-moz-transform:rotateY(180deg);
+	-webkit-transform:rotate3d(0,1,0,180deg);
+	-moz-transform:rotate3d(0,1,0,180deg);
 }
 
 
@@ -147,8 +147,8 @@ body {
 	background:url(../images/icon1.png) center center no-repeat #aaa;
 }
 .nav .i_back{
-	-webkit-transform:rotateY(-180deg);
-	-moz-transform:rotateY(-180deg);
+	-webkit-transform:rotate3d(0,1,0,-180deg);
+	-moz-transform:rotate3d(0,1,0,-180deg);
 	background-color:#555;
 	/*background:url(../images/icon2.png) center center no-repeat #555;*/
 }
@@ -157,12 +157,12 @@ body {
 	-moz-transform-origin:0% 50%;
 }
 .photo_front .photo-wrap{
-	-webkit-transform:translate(0px,0px) rotateY(0deg);
-	-moz-transform:translate(0px,0px) rotateY(0deg);
+	-webkit-transform:translate(0px,0px) rotate3d(0,1,0,0deg);
+	-moz-transform:translate(0px,0px) rotate3d(0,1,0,0deg);
 }
 .photo_back .photo-wrap{
-	-webkit-transform:translate(260px,0px) rotateY(180deg);
-	-moz-transform:translate(260px,0px) rotateY(180deg);
+	-webkit-transform:translate(260px,0px) rotate3d(0,1,0,180deg);
+	-moz-transform:translate(260px,0px) rotateY(0,1,0,180deg);
 
 }
 
