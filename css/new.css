@@ -11,7 +11,7 @@ nav{
     height:50px;
     width:100%;
     color:#fff;
-    background-color:rgba(255,255,255,.3);
+    background-color:rgba(255,255,255,.5);
     position: absolute;
     top:0;
     left:0;
@@ -51,7 +51,7 @@ li{
     width:100%;
     background-color:#c18e33;
     font-size:inherit;
-    font-family: "微软雅黑";
+
 }
 .about_center{
     height:100%;
@@ -142,6 +142,9 @@ li{
     margin:0 auto;
     color:#fff;
     position: relative;
+    -webkit-perspective:800px;
+    -moz-perspective: 800px;
+    perspective: 800px;
 }
 .work_center>p{
     height:50px;
@@ -165,6 +168,11 @@ li{
     height:200px;
     width:100%;
     box-shadow:5px 5px 10px #000;
+}
+.content_img img:hover{
+    -moz-animation:a .8s;
+
+    animation:a .8s;
 }
 .content_img>p{
     text-align: center;
@@ -238,3 +246,17 @@ footer a:hover{
 .pull-right{
     float: right;
 }
+@keyframes a {
+    0%{transform: rotateY(0deg)}
+    50%{transform: rotateY(-8deg)}
+    75%{transform: rotateY(6deg)}
+    90%{transform: rotateY(-4deg)}
+    100%{transform: rotateY(0deg)}
+}
+@-moz-keyframes a {
+         0%{transform: rotateY(0deg)}
+         50%{transform: rotateY(-8deg)}
+         75%{transform: rotateY(6deg)}
+         90%{transform: rotateY(-4deg)}
+         100%{transform: rotateY(0deg)}
+     }
