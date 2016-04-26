@@ -1,0 +1,240 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{font-family: "Montserrat",sans-serif;}
+a{color:#fff;
+    text-decoration: none;
+}
+nav{
+    height:50px;
+    width:100%;
+    color:#fff;
+    background-color:rgba(255,255,255,.3);
+    position: absolute;
+    top:0;
+    left:0;
+    line-height:50px;
+    font-size:1.3em;
+    font-weight:700;
+
+}
+nav .nav{
+    width:1000px;
+    min-width:700px;
+    margin:0 auto;
+    border-bottom:2px solid #F0EEEE;
+}
+li{
+    display: inline-block;
+    width:19%;
+    text-align:center;
+}
+#home{
+    color:#fff;
+    height:auto;
+    min-height:710px;
+    padding-top:200px;
+    background:#9D9D9D url(../images/c19f3e54dbf175e7.jpg) no-repeat fixed center center;
+    background-size:cover;
+    text-align: center;
+    font-size:1.6em;
+    line-height: 50px;
+}
+#bai{
+    margin-top:60px;
+    margin-left:200px;
+}
+#aboutMe{
+    height:400px;
+    width:100%;
+    background-color:#c18e33;
+    font-size:inherit;
+    font-family: "微软雅黑";
+}
+.about_center{
+    height:100%;
+    width:700px;
+    margin:0 auto;
+    color:#fff;
+    position: relative;
+}
+.about_center>p{
+    height:50px;
+    width:150px;
+    text-align: center;
+    margin-left:-75px;
+    line-height:50px;
+    border:2px solid #fff;
+    position:absolute;
+    top:20px;
+    left:50%;
+}
+.left{
+    height:200px;
+    width:250px;
+    position: absolute;
+    left:20px;
+    top:90px;
+}
+.left>p{
+    margin-top:15px;
+}
+.left span{
+    margin-top:15px;
+}
+.img{
+    height:150px;
+    width:150px;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    /*border:1px solid #fff;*/
+    background:url(../images/chenli.jpg) no-repeat 0% 0%;
+    background-size: 100%;
+    position:absolute;
+    margin-left: -75px;
+    top:90px;
+    left:50%;
+}
+.bottom{
+    height:150px;
+    width:500px;
+    /*background:#fff;*/
+    position:absolute;
+    bottom:20px;
+    left:190px;
+}
+.bottom>img{
+    height:80px;
+    width:90px;
+    position:absolute;
+}
+#ps{
+    bottom:0;
+    left:10px;
+}
+#ai{
+    bottom:40px;
+    left:80px;
+}
+#fl{
+    bottom:0;
+    left:150px;
+}
+#dw{
+    bottom:40px;
+    left:220px;
+}
+#ws{
+    bottom:0;
+    left:290px;
+}
+#work{
+    height:400px;
+    width:100%;
+    background-color: #514188;
+}
+.work_center{
+    height:100%;
+    width:700px;
+    margin:0 auto;
+    color:#fff;
+    position: relative;
+}
+.work_center>p{
+    height:50px;
+    width:150px;
+    text-align: center;
+    margin-left:-75px;
+    line-height:50px;
+    border:2px solid #fff;
+    position:absolute;
+    top:20px;
+    left:50%;
+}
+.content_img{
+    height:300px;
+    width:100%;
+    /*background: #000;*/
+    position: absolute;
+    bottom:0;
+}
+.content_img img{
+    height:200px;
+    width:100%;
+    box-shadow:5px 5px 10px #000;
+}
+.content_img>p{
+    text-align: center;
+    margin-top:20px;
+}
+#video{
+    height:300px;
+    background: #ccc url(../images/bg2.jpg) no-repeat;
+    background-size:cover;
+}
+#contact{
+    height:330px;
+    width:100%;
+    background-color: #4B4A4A;
+}
+.contact_center{
+    width:700px;
+    margin:0 auto;
+    color:#fff;
+    height:100%;
+}
+.contact_center>p{
+    font-size:1.5em;
+    height:80px;
+    text-align: center;
+    padding:30px;
+
+}
+.contact_center>input{
+    height:40px;
+    width:300px;
+    margin:10px 0 0 30px;
+    border:2px solid #fff;
+    color:#CCCCCC;
+    background-color:transparent;
+    padding-left:10px;
+}
+#message{
+    height:100px;
+    width:634px;
+    margin-left:30px;
+    margin-top:20px;
+}
+.contact_center button{
+    height:30px;
+    width:150px;
+    border-radius:5px;
+    float: right;
+    margin-right:36px;
+     margin-top:20px;
+}
+footer{
+    height:50px;
+    background-color:#4B4A4A;
+    /*font-weight:700;*/
+    padding:10px 0;
+}
+footer a:hover{
+    color:#F0B977;
+}
+.container{
+    height:30px;
+    width:700px;
+    margin:0 auto;
+    color:#fff;
+    line-height:30px;
+}
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
